@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Multiplica Front End</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet" />
+</head>
+<body>
+	<div id="root" class="main__wrapper">
+		<nav class="navbar">
+			<canvas id="chh_logo" width="200" height="70"></canvas>
+			<div class="clock" id="my_clock">
+				<div class="clock__hour font-size-4" id="my_clock_timer">
+					<span class="clock__hour--hour"></span>
+					<span class="clock__hour--hour">:</span>
+					<span class="clock__hour--min"></span>
+					<span class="clock__hour--sec font-size-2"></span>
+				</div>
+			</div>
+		</nav>
+		<section class="usuarios">
+			<h3 class="usuarios__title text-center">We Love Photos</h3>
+			<div class="serchbar">
+				<input type="text" class="serchbar__input" placeholder="Search user..."
+						id="serchbar_input" />
+			</div>
+			<div class="usuarios__tabla able-scroll-y" id="usuarios_tabla"></div>
+			<span class="usuarios__mas text-center ver_todos" id="ver_todo_usuarios">See all...</span>
+		</section>
+		<div class="modal__wrapper display-none" id="modal_container">
+			<div class="modal__container" id="modal_user_data">
+				<div class="modal__row modal__row--shadow" id="modal_head_container"></div>
+				<div class="modal__row">
+					<div class="modal__row_2">
+						<div class="modal__row modal__row--shadow padding-full-1" id="user_data_sections">
+							<div class="singleu__row single_user_company" id="user_left_data_company"></div>
+							<div class="singleu__row single_user_company" id="user_left_data_address"></div>
+						</div>
+					</div>			
+					<div class="modal__row_8 padding-left-1">
+						<div class="modal__row modal__row--shadow">
+							<div class="singleu__row single_user_company padding-full-1">
+								<h4 class="singleu__row singleu__row--section">Albums</h4>
+								<div class="singleu__row" id="modal_user_albums"></div>
+							</div>
+						</div>
+					</div>		
+				</div>
+				<div class="modal__row modal__row--shadow display-none">
+					<div class="singleu__map" id="user_map">
+						<canvas id="map"></canvas>
+					</div>
+				</div>
+				<div class="modal__row text-center">
+					<button class="singleu__button close_modal margin-top-2">Close</button>
+				</div>
+			</div>	
+			<div class="modal__album display-none" id="modal_photos_album">
+				<div class="album__photos">
+					<div class="album__header">
+						<h4 class="album__title" id="album_images_title"></h4>
+						<p class="album__by">By @<span id="album_images_by"></span></p>
+					</div>
+					<div class="album__content" id="images_of_album"></div>
+					<span class="modal__close" id="modal_photos_album_close">X</span>
+				</div>
+			</div>	
+		</div>	
+	</div>	
+</body>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAbqhjt_jtQZpyVvEimMsI0Rlp-QE3C0E&callback=initMap" type="text/javascript"></script>
+<script src="js/app.multiplica.js"></script>
+</html>
